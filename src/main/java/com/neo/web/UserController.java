@@ -2,6 +2,7 @@ package com.neo.web;
 
 import com.neo.model.UserInfo;
 import com.neo.sevice.UserInfoService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -51,7 +52,7 @@ public class UserController {
      * @return
      */
     @RequestMapping("/delete")
-//    @RequiresPermissions("userInfo:del")//权限管理;
+//    @RequiresPermissions("user:delete")//权限管理;
     public String userDel(String id) {
         userInfoService.deleteUserById(id);
         return "redirect:/user/userList";

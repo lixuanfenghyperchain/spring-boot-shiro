@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>user</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"></link>
+</head>
+<body class="container">
+<br/>
+<h1>添加角色</h1>
+<br/><br/>
+<div class="with:80%">
+    <form class="form-horizontal"   th:action="@{/role/add}"  method="post">
+        <div class="form-group">
+            <label for="role" class="col-sm-2 control-label">roleName</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="role"  id="role" placeholder="role"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="description" class="col-sm-2 control-label" >description</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="description" id="description" placeholder="password"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="available" class="col-sm-2 control-label">available</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="available"  id="available" placeholder="available"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="submit" value="Submit" class="btn btn-info" />
+                &nbsp; &nbsp; &nbsp;
+                <input type="reset" value="Reset" class="btn btn-info" />
+            </div>
+
+        </div>
+    </form>
+</div>
+</body>
+</html>
